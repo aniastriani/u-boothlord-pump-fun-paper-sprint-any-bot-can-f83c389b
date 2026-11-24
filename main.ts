@@ -47,16 +47,16 @@ const CURVE_FEE = 0.0125; // protocol + creator fee share taken on a sell
 const WINDOW = 40; // entry lookback, slots
 const MIN_AGE = 40; // slots since CreateEvent before an entry is allowed
 const MIN_BUYS = 4; // buy trades inside the window
-const MIN_NET_SOL = 1.0; // net buy SOL (buys minus sells) inside the window
-const MIN_UP = 0.05; // price now vs window start, minus 1
+const MIN_NET_SOL = 1.5; // net buy SOL (buys minus sells) inside the window
+const MIN_UP = 0.06; // price now vs window start, minus 1
 const NEAR_HIGH = 0.92; // price now as a share of the window high
 const MIN_RQ_SOL = 0.5; // real SOL reserves at entry, lower bound
 const MAX_RQ_SOL = 80; // real SOL reserves at entry, upper bound
 const STAKE_SOL = 0.1; // SOL spent on one position
 const MIN_BUY_SOL = 0.01; // smallest buy worth sending (guardrail round trip floor)
 const BUY_SLIP_BPS = 1500; // slippage on buys; sells go out wide open
-const TAKE_PROFIT = 0.15; // exit when value >= cost * (1 + TAKE_PROFIT)
-const STOP_LOSS = 0.12; // exit when value <= cost * (1 - STOP_LOSS)
+const TAKE_PROFIT = 0.12; // exit when value >= cost * (1 + TAKE_PROFIT)
+const STOP_LOSS = 0.1; // exit when value <= cost * (1 - STOP_LOSS)
 const FADE_WINDOW = 20; // slots of recent flow checked for a fade exit
 const FADE_NET_SOL = 2; // exit when net flow over FADE_WINDOW < -FADE_NET_SOL
 const MAX_HOLD = 800; // slots before the stale exit can fire
